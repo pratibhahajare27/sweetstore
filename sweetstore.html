@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+ <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <script src="assets/js/jquery-3.5.1.js"></script>
+ <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<style>
+	body{
+	background-color:rgb(240, 240, 240);
+	}
+	
+   .btnstyle{
+	text-align:center;
+	background-color:rgb(240, 240, 240);
+	padding-top:20px;
+	padding-bottom:20px;
+	font-family:cursive;
+	}
+	
+	.btn-lg{
+	 padding-left:20px;
+	 margin-left:35px;
+	 }
+	.item {
+     position: relative;
+     padding:10px;
+     }
+	.card-img-top{
+	 width :248px; 
+	 height :200px;
+	 }
+	 .card{
+	 width :250px; 
+	 height :250px;
+	 background-color:white;
+	 }
+	 .card-group{
+	 margin-bottom:30px;
+	 margin-top:30px;
+	 }
+	 .header{
+	 font-size:40px;
+	 text-align:center;
+	 padding-top:20px;
+	 padding-bottom:20px;
+	 font-family:cursive;
+	 font-weight:bold;
+	 }
+	 .headerstyle{
+	 font-size:50px;
+	 color:pink;
+	 font-family:cursive;
+	 text-align:center;
+	 padding-top:20px;
+	 padding-bottom:20px;
+	 }
+	 .showcard{
+	  display:none;
+	 } 
+	 .product1{
+	  padding-left:80px;
+	  }
+	  .product2{
+	  padding-left:70px;
+	  }
+	  .product3{
+	  padding-left:10px;
+	  }
+	 .card-title{
+	  font-size:20px;
+	  font-family:cursive;
+	  font-weight:bold;
+	  }
+	  .pink{
+	  background-color:pink;
+	  }
+	  .pink:hover{
+	  background-color:pink;
+	  }
+	  .input-group{
+	  padding-left:200px;
+	  width:70%;
+	  }
+	  form.example button {
+      float:left;
+      width:10%;
+	  height:20%;
+	  
+      }
+	  form.example input[type=text] {
+      float:left;
+      width:80%;
+      padding-bottom:5px;
+	  padding-top:5px;
+      }
+
+	</style>
+	<script>
+    function openImg(imgTagId){
+	var cardimg = document.getElementsByClassName("showcard");
+	for (let i = 0; i < cardimg.length; i++){
+    $('#'+cardimg[i].id).hide();
+	$(imgTagId).show();
+	}
+	if (imgTagId=="all")
+	{
+	for (let i = 0; i < cardimg.length; i++){
+    $('#'+cardimg[i].id).show();
+    }
+	}
+	}
+	</script>
+	<script>
+	 function myFunction()
+	var product = document.getElementsByClassName('showcard'); 
+     
+    for (i = 0; i < product.length; ++i) {
+    product[i].click();
+    };
+      
+    </script>
+	</head>
+	<body>
+	<div>
+	<h1 class="header">Our <strong class="headerstyle"><i>Store</i></strong></h1>
+	</div>
+	<div class="btnstyle">
+	<button type="button" onclick="openImg('all')" class="btn btn-default btn-lg">ALL</button>
+	<button type="button" onclick="openImg('#cakesimg')" class="btn btn-default btn-lg">CAKES</button>
+	<button type="button" onclick="openImg('#cupcakesimg')" class="btn btn-default btn-lg">CUPCAKES</button>
+	<button type="button" onclick="openImg('#sweetsimg')"class="btn btn-default btn-lg">SWEETS</button>
+	<button type="button" onclick="openImg('#doughnutsimg')"class="btn btn-default btn-lg">DOUGHNUTS</button>
+	</div>
+	
+	<div class="container">
+	<form class="example" style="margin:auto;max-width:600px">
+    <button type="button" id="search-button" onclick="myFunction();" class="btn btn-default pink"><i class="glyphicon glyphicon-search"></i></button>
+    <input type="text" id="search-input"  placeholder="item.." name="search">
+    </form>
+	</div>
+	
+	 <div class="container showcard demo" id="cakesimg">
+	 <div class="card-group">
+     <div class="row">
+     <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product1.jpg">
+     <div class="card-body">
+	 <div>
+     <h5 class="card-title"> Cake Item <i class="product1">$250</i></h5> 
+	 </div>
+     </div>
+     </div>
+     </div>
+     <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product2.jpg">
+     <div class="card-body">
+     <h5 class="card-title">Cake Item <i class="product1">$300</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 
+	 <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product3.jpg">
+     <div class="card-body">
+     <h5 class="card-title">Cake Item <i class="product1">$350</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 
+	 <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product4.jpg">
+     <div class="card-body">
+     <h5 class="card-title">Cake Item <i class="product1"></i>$400</h5>  
+     </div>
+     </div>
+	 </div>
+	 </div>
+	 </div>
+	 </div>
+     
+	 <div class="container showcard demo" id="cupcakesimg">
+	 <div class="card-group">
+     <div class="row">
+     <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product5.jpg" >
+     <div class="card-body">
+     <h5 class="card-title">Cupcake Item <i class="product2">$20</i></h5>  
+     </div>
+     </div>
+     </div>
+     <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product6.jpg">
+     <div class="card-body">
+     <h5 class="card-title">Cupcake Item <i class="product2">$25</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 
+	 <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product7.jpg">
+     <div class="card-body">
+     <h5 class="card-title">Cupcake Item <i class="product2">$30</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 
+	 <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product8.jpg">
+     <div class="card-body">
+     <h5 class="card-title">Cupcake Item <i class="product2">$35</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 </div>
+	 </div>
+	 </div>
+	 
+	 <div class="container showcard" id="sweetsimg">
+	 <div class="card-group">
+     <div class="row">
+     <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product9.jpg" >
+     <div class="card-body">
+     <h5 class="card-title">Sweet Item <i class="product2">$350</i></h5>  
+     </div>
+     </div>
+     </div>
+     <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product10.jpg">
+     <div class="card-body">
+     <h5 class="card-title">Sweet Item <i class="product2">$370</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 
+	 <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product11.jpg" >
+     <div class="card-body">
+     <h5 class="card-title">Sweet Item <i class="product2">$570</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 
+	 <div class="col-sm-3">
+     <div class="card">
+	 <img class="card-img-top" src="assets/images/product12.png">
+     <div class="card-body">
+     <h5 class="card-title">Sweet Item <i class="product2">$270</i></h5>  
+     </div>
+     </div>
+	 </div>
+	 </div>
+	 </div>
+	 </div>
+	 
+	
+	 <div class="container showcard" id="doughnutsimg">
+	 <div class="card-group">
+	 <div class="row">
+	 <div class="col-sm-3">
+	 <div class="card">
+	 <img class="card-img-top" src="assets/images/product13.jpg">
+	 <div class="card-body">
+	 <h5 class="card-title">Doughnuts Item <i class="product3">$299</i></h5>
+	 </div>
+	 </div>
+	 </div>
+	 
+	 
+	 <div class="col-sm-3">
+	 <div class="card">
+	 <img class="card-img-top" src="assets/images/product14.jpg">
+	 <div class="card-body">
+	 <h5 class="card-title">Doughnuts Item <i class="product3">$200</i></h5>
+	 </div>
+	 </div>
+	 </div>
+	 
+	 
+	 <div class="col-sm-3">
+	 <div class="card">
+	 <img class="card-img-top" src="assets/images/product15.jpg">
+	 <div class="card-body">
+	 <h5 class="card-title">Doughnuts Item <i class="product3">$100</i></h5>
+	 </div>
+	 </div>
+	 </div>
+	 <div class="col-sm-3">
+	 <div class="card">
+	 <img class="card-img-top" src="assets/images/product16.jpg">
+	 <div class="card-body">
+	 <h5 class="card-title">Doughnuts Item <i class="product3">$150</i></h5>
+	 </div>
+	 </div>
+	 </div>
+	 </div>
+	 </div>
+	 </div>
+	</body> 
+	
+</html>
